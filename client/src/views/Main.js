@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-// import Form from '../components/Form';
+import Form from '../components/Form';
 // import Quotes from '../components/Quotes'
 // // import Topics from '../components/Topics';
 // // import Authors from '../components/Authors';
@@ -30,7 +30,7 @@ const Main = () => {
             {/* <h1>This is MAIN page</h1> */}
             <h3>"{ranQuote.quote}"</h3>
             <h3>{ranQuote.name}</h3>
-
+            <Form />
         </div>
     );
 

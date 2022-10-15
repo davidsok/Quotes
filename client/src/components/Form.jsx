@@ -73,7 +73,7 @@ const Form = (props) => {
                     <div>
                         <label>Author Name: </label>
                         <select onChange={(e) =>setName(e.target.value)} value={name}>
-                            <option value='Tony Robbins'>Tony Robbins</option>
+                            <option selected='selected' value='Tony Robbins'>Tony Robbins</option>
                             <option value='Roy Bennett'>Roy Bennett</option>
                             <option value='Isaac Newton'>Isaac Newton</option>
                             <option value="Stephen King">Stephen King</option>
@@ -91,7 +91,7 @@ const Form = (props) => {
                     </div>
                     <div style={{marginTop:10, marginBottom:10}}>
                         <label>Topic: </label>
-                        <select onChange={(e) =>setTopic(e.target.value)} value={topic}>
+                        <select onChange={(e) => {setTopic(e.target.value); console.log(e.target.value)}} value={topic}>
                             <option value="Inspiration">Inspiration</option>
                             <option value="Motivation">Motivation</option>
                             <option value="Travel">Travel</option>

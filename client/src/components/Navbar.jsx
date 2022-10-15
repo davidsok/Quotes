@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 
 
 
 const Navbar = () => {
-    const [name, setAuthor] = useState("");
-    const [topic, setTopic] = useState("");
+    // const [name, setAuthor] = useState("");
+    // const [topic, setTopic] = useState("");
+    const { topic } = useParams();
     const navigate = useNavigate();
     // const [flip, setFlip] = useState("");
 
@@ -111,13 +112,13 @@ const topicChange = () => {
           <div className="dropdown" onMouseOver={showTopicDropdown} onMouseOut={hideTopicDropdown}>
             <button className="dropbtn">Topics <i className="fa fa-caret-down"></i></button>
             <div id="dropdown_topic_content">
-              <a href={`/quotes/topics/${topic}`} data-id="Change" onChange={() => setTopic('change')}>Change</a>
-              <a href={`/quotes/topics/${topic}`} data-id="Inspiration" onChange={() => setTopic('inspiration')}>Inspiration</a>
-              <a href="#">Love</a>
-              <a href="#">Motivation</a>
-              <a href="#">Philosophy</a>
-              <a href="#">Travel</a>
-              <a href="#">Reminder</a>
+              <a href={`/quotes/topics/change`} data-id="Change">Change</a>
+              <a href={`/quotes/topics/inspiration`} data-id="Inspiration">Inspiration</a>
+              <a href={`/quotes/topics/love`} data-id="Love">Love</a>
+              <a href={`/quotes/topics/motivation`} data-id="Motivation">Motivation</a>
+              <a href={`/quotes/topics/philosophy`} data-id="Philosophy">Philosphy</a>
+              <a href={`/quotes/topics/travel`} data-id="Travel">Travel</a>
+              <a href={`/quotes/topics/reminder`} data-id="Reminder">Reminder</a>
             </div>
           </div>
         </div>
